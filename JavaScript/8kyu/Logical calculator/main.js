@@ -1,9 +1,3 @@
-// const operator = {
-//     OR: (a,b) => a || b,
-//     AND: (a,b) => a && b,
-//     XOR: (a,b) => (!a && b) || (a && !b)
-// }
-// const logicalCalc = (array, op) => array.reduce(operator[op])
 const logicalCalc = (array,op) => (op === "AND") ? array.every(v => v) : (op === "OR") ? array.some(v => v) : !!array.reduce((s, v) => s ^ v)
 
 console.log(logicalCalc([true, true, true, false], "AND"), false);
